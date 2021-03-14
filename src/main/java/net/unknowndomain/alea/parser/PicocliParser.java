@@ -36,6 +36,8 @@ import picocli.CommandLine;
 import picocli.CommandLine.Model.CommandSpec;
 import picocli.CommandLine.Model.OptionSpec;
 import picocli.CommandLine.ParseResult;
+import picocli.CommandLine.TypeConversionException;
+import picocli.CommandLine.UnmatchedArgumentException;
 
 /**
  *
@@ -59,13 +61,13 @@ public class PicocliParser
             ParseResult result = cmd.parseArgs(args);
             parseOptions(options, result);
         }
-        catch (CommandLine.TypeConversionException ex)
+        catch (TypeConversionException ex)
         {
             options.setHelp(true);
         }
         catch (Exception ex)
         {
-            LOGGER.error(null, ex);
+            LOGGER.error(options.getClass().getCanonicalName(), ex);
             options.setHelp(true);
         }
     
