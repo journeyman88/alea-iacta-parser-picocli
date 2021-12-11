@@ -13,7 +13,7 @@
 
     <scm>
         <connection>scm:git:git://github.com/journeyman88/alea-iacta-parser-picocli</connection>
-        <developerConnection>scm:git:ssh://github.com/journeyman88/alea-iacta-parser-picocli</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com/journeyman88/alea-iacta-parser-picocli</developerConnection>
         <url>https://github.com/journeyman88/alea-iacta-parser-picocli</url>
       <tag>1.0.0</tag>
   </scm>    
